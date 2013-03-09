@@ -32,11 +32,25 @@ void init(CanvasElement canvas)
   }
 }
 
+void drawArrays(DrawMode drawMode, int first, int count) => _context.drawArrays(drawMode._glConst, first, count);
+
+void drawElements(DrawMode drawMode, int count, DataType type, int offset) => _context.drawElements(drawMode._glConst, count, type._glConst, offset);
+
 void viewport(int x, int y, int width, int height) => _context.viewport(x, y, width, height); 
 
 void clearColor(num r, num g, num b, num a) => _context.clearColor(r, g, b, a);
 
 void clearDepth(num depth) => _context.clearDepth(depth);
+
+void clear(List<ClearMode> modes)
+{
+    int mask = 0;
+    for(ClearMode mode in modes)
+    {
+      mask |= mode._glConst;
+    }
+    _context.clear(mask);
+}
 
 void lineWidth(num width) => _context.lineWidth(width);
 
@@ -45,6 +59,8 @@ void frontFace(FrontFaceMode mode) => _context.frontFace(mode._glConst);
 void cullFace(CullFaceMode mode) => _context.cullFace(mode._glConst);
 
 void enableDepthTest(bool enable) => _enable(enable, WebGLRenderingContext.DEPTH_TEST);
+
+void enableCullFace(bool enable) => _enable(enable, WebGLRenderingContext.CULL_FACE);
 
 void _enable(bool enable, int cap)
 {

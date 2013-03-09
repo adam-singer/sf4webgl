@@ -1,6 +1,7 @@
 name: sf4webgl
-version: 0.1.0
+version: 0.1.2
 author: Oliver Damm <oliver.damm@gmx.de>
 description: A simple facade for the WebGL API
+homepage: http://www.blimster.net
 dependencies:
   vector_math: 0.9.5

@@ -84,4 +84,29 @@ class CullFaceMode extends WebGlConst
   
 }
 
+class ClearMode extends WebGlConst
+{
+
+  static final ClearMode COLOR_BUFFER = const ClearMode(WebGLRenderingContext.COLOR_BUFFER_BIT);
+  static final ClearMode DEPTH_BUFFER = const ClearMode(WebGLRenderingContext.DEPTH_BUFFER_BIT);
+  
+  const ClearMode(int glConst) : super(glConst);
+  
+}
+
+class DrawMode extends WebGlConst
+{
+
+  static final DrawMode TRIANGLES = const DrawMode(WebGLRenderingContext.TRIANGLES);
+  static final DrawMode TRIANGLE_FAN = const DrawMode(WebGLRenderingContext.TRIANGLE_FAN);
+  static final DrawMode TRIANGLE_STRIP = const DrawMode(WebGLRenderingContext.TRIANGLE_STRIP);
+  
+  static final DrawMode LINES = const DrawMode(WebGLRenderingContext.LINES);
+  static final DrawMode LINE_STRIP = const DrawMode(WebGLRenderingContext.LINE_STRIP);
+  static final DrawMode LINE_LOOP = const DrawMode(WebGLRenderingContext.LINE_LOOP);
+  
+  const DrawMode(int glConst) : super(glConst);
+  
+}
+
 
