@@ -27,9 +27,9 @@ import 'package:vector_math/vector_math.dart';
 
 export 'package:vector_math/vector_math.dart';
 
-part 'constants.dart';
-part 'context.dart';
-part 'shader.dart';
-part 'buffer.dart';
-part 'vertexattribute.dart';
-part 'uniform.dart';
+part 'src/constants.dart';
+part 'src/context.dart';
+part 'src/shader.dart';
+part 'src/buffer.dart';
+part 'src/vertexattribute.dart';
+part 'src/uniform.dart';
